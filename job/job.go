@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ajvb/kala/utils/iso8601"
+	"github.com/missmp/kala/utils/iso8601"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/nu7hatch/gouuid"

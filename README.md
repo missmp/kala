@@ -5,7 +5,7 @@
 
 #### Donate
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ajvb&url=https://github.com/ajvb/kala&title=Kala&language=&tags=github&category=software)
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ajvb&url=https://github.com/missmp/kala&title=Kala&language=&tags=github&category=software)
 
 #### Currently in Alpha stage. Do not use in production environments.
 
@@ -35,7 +35,7 @@ I recommend checking out [Chronos](https://github.com/airbnb/chronos). This is d
 1. Get Kala
 
 	```
-	go get github.com/ajvb/kala
+	go get github.com/missmp/kala
 	```
 
 2. Run Kala
@@ -49,7 +49,7 @@ I recommend checking out [Chronos](https://github.com/airbnb/chronos). This is d
 1. Change directory to Kala source
 
 	```
-	cd $GOPATH/src/github.com/ajvb/kala
+	cd $GOPATH/src/github.com/missmp/kala
 	```
 
 2. Install godep
@@ -119,7 +119,7 @@ Once it's up in running, you can utilize curl or the official go client to inter
 
 ### Examples of Usage
 
-There are more examples in the [examples directory](https://github.com/ajvb/kala/tree/master/examples) within this repo. Currently its pretty messy. Feel free to submit a new example if you have one.
+There are more examples in the [examples directory](https://github.com/missmp/kala/tree/master/examples) within this repo. Currently its pretty messy. Feel free to submit a new example if you have one.
 
 # Deployment
 
@@ -149,14 +149,14 @@ All routes have a prefix of `/api/v1`
 ## Client Libraries
 
 #### Official:
-* Go - [client](https://github.com/ajvb/kala/tree/master/client) - Docs: http://godoc.org/github.com/ajvb/kala/client
+* Go - [client](https://github.com/missmp/kala/tree/master/client) - Docs: http://godoc.org/github.com/missmp/kala/client
 
 Install using:
-`go get github.com/ajvb/kala/client`
+`go get github.com/missmp/kala/client`
 
 ## Job Data Struct
 
-[Docs can be found here](http://godoc.org/github.com/ajvb/kala/job#Job)
+[Docs can be found here](http://godoc.org/github.com/missmp/kala/job#Job)
 
 ## Things to Note
 
@@ -171,7 +171,7 @@ Install using:
 {
         "name":"test_job",
         "id":"93b65499-b211-49ce-57e0-19e735cc5abd",
-        "command":"bash /home/ajvb/gocode/src/github.com/ajvb/kala/examples/example-kala-commands/example-command.sh",
+        "command":"bash /home/ajvb/gocode/src/github.com/missmp/kala/examples/example-kala-commands/example-command.sh",
         "owner":"",
         "disabled":false,
         "dependent_jobs":null,
@@ -279,7 +279,7 @@ Example:
 ```bash
 $ curl http://127.0.0.1:8000/api/v1/job/
 {"jobs":{}}
-$ curl http://127.0.0.1:8000/api/v1/job/ -d '{"epsilon": "PT5S", "command": "bash /home/ajvb/gocode/src/github.com/ajvb/kala/examples/example-kala-commands/example-command.sh", "name": "test_job", "schedule": "R2/2017-06-04T19:25:16.828696-07:00/PT10S"}'
+$ curl http://127.0.0.1:8000/api/v1/job/ -d '{"epsilon": "PT5S", "command": "bash /home/ajvb/gocode/src/github.com/missmp/kala/examples/example-kala-commands/example-command.sh", "name": "test_job", "schedule": "R2/2017-06-04T19:25:16.828696-07:00/PT10S"}'
 {"id":"93b65499-b211-49ce-57e0-19e735cc5abd"}
 $ curl http://127.0.0.1:8000/api/v1/job/
 {
@@ -287,7 +287,7 @@ $ curl http://127.0.0.1:8000/api/v1/job/
         "93b65499-b211-49ce-57e0-19e735cc5abd":{
             "name":"test_job",
             "id":"93b65499-b211-49ce-57e0-19e735cc5abd",
-            "command":"bash /home/ajvb/gocode/src/github.com/ajvb/kala/examples/example-kala-commands/example-command.sh",
+            "command":"bash /home/ajvb/gocode/src/github.com/missmp/kala/examples/example-kala-commands/example-command.sh",
             "owner":"",
             "disabled":false,
             "dependent_jobs":null,
@@ -314,7 +314,7 @@ Performing a DELETE will delete the Job.
 Example:
 ```bash
 $ curl http://127.0.0.1:8000/api/v1/job/93b65499-b211-49ce-57e0-19e735cc5abd/
-{"job":{"name":"test_job","id":"93b65499-b211-49ce-57e0-19e735cc5abd","command":"bash /home/ajvb/gocode/src/github.com/ajvb/kala/examples/example-kala-commands/example-command.sh","owner":"","disabled":false,"dependent_jobs":null,"parent_jobs":null,"schedule":"R2/2017-06-04T19:25:16.828696-07:00/PT10S","retries":0,"epsilon":"PT5S","success_count":0,"last_success":"0001-01-01T00:00:00Z","error_count":0,"last_error":"0001-01-01T00:00:00Z","last_attempted_run":"0001-01-01T00:00:00Z","next_run_at":"2017-06-04T19:25:16.828737931-07:00"}}
+{"job":{"name":"test_job","id":"93b65499-b211-49ce-57e0-19e735cc5abd","command":"bash /home/ajvb/gocode/src/github.com/missmp/kala/examples/example-kala-commands/example-command.sh","owner":"","disabled":false,"dependent_jobs":null,"parent_jobs":null,"schedule":"R2/2017-06-04T19:25:16.828696-07:00/PT10S","retries":0,"epsilon":"PT5S","success_count":0,"last_success":"0001-01-01T00:00:00Z","error_count":0,"last_error":"0001-01-01T00:00:00Z","last_attempted_run":"0001-01-01T00:00:00Z","next_run_at":"2017-06-04T19:25:16.828737931-07:00"}}
 $ curl http://127.0.0.1:8000/api/v1/job/93b65499-b211-49ce-57e0-19e735cc5abd/ -X DELETE
 $ curl http://127.0.0.1:8000/api/v1/job/93b65499-b211-49ce-57e0-19e735cc5abd/
 ```
@@ -344,7 +344,7 @@ $ curl http://127.0.0.1:8000/api/v1/stats/
 
 # Documentation
 
-[Contributor Documentation can be found here](http://godoc.org/github.com/ajvb/kala)
+[Contributor Documentation can be found here](http://godoc.org/github.com/missmp/kala)
 
 ## Debugging Jobs
 
@@ -361,7 +361,7 @@ FATA[0000] Command Failed with err: exit status 1
 
 ### How to add a dependent job
 
-Check out this [example for how to add dependent jobs](https://github.com/ajvb/kala/blob/master/examples/python/example_dependent_jobs.py) within a python script.
+Check out this [example for how to add dependent jobs](https://github.com/missmp/kala/blob/master/examples/python/example_dependent_jobs.py) within a python script.
 
 ### Notes on Dependent Jobs
 
